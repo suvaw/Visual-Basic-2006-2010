@@ -1,0 +1,5 @@
+Dim str As String
+        str = "10/02/2017"
+        Dim str2() As String
+        str2 = str.Split("/")
+        MsgBox(str2(1))

@@ -1,0 +1,32 @@
+
+I have a built in splash screen, and I set a handler as such:
+
+If Not My.Application.SplashScreen Is Nothing Then
+
+AddHandler My.Application.SplashScreen.Deactivate, AddressOf SplashScreen1_Deactivate
+
+End If
+
+'And here is the sub
+
+Private Sub SplashScreen1_Deactivate(ByVal sender As Object, ByVal e As System.EventArgs)
+
+MsgBox(Threading.Thread.CurrentThread.Name)
+
+End Sub
+
+Sub Main()
+
+Dim frmSplash as new splashscreen
+
+dim frmMain as new MainForm
+
+frmsplash.show()
+
+' Do expensive work here
+
+frmSplash.close()
+
+frmMain.show()
+
+End Sub

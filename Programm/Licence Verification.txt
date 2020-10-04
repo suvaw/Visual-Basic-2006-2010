@@ -1,0 +1,58 @@
+step 1:
+Private Sub <TextBox1>_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+	If <TextBox Present>.Text.Length = 1 Then
+            <TextBox Next>.Text = ""
+            <TextBox Next>.Focus()
+        End If
+End Sub
+so on....
+Public Class <Form3>
+    Public Property <time> As String
+    Private Sub <Button1>_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If <TextBox1>.Text + TextBox2.Text + TextBox3.Text + TextBox4.Text = time Then
+            <Label1>.Text = "OTP verification sucessful"
+        Else
+            <Label1>.Text = "Worng OTP Enter"
+        End If
+    End Sub
+
+Example:
+========
+Public Class Form3
+    Public Property time As String
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If TextBox1.Text + TextBox2.Text + TextBox3.Text + TextBox4.Text = time Then
+            Label1.Text = "OTP verification sucessful"
+        Else
+            Label1.Text = "Worng OTP Enter"
+        End If
+    End Sub
+
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        If TextBox1.Text.Length = 1 Then
+            TextBox2.Text = ""
+            TextBox2.Focus()
+        End If
+    End Sub
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+        If TextBox2.Text.Length = 1 Then
+            TextBox3.Text = ""
+            TextBox3.Focus()
+        End If
+    End Sub
+
+    Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+        If TextBox3.Text.Length = 1 Then
+            TextBox4.Text = ""
+            TextBox4.Focus()
+        End If
+    End Sub
+
+    Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox4.TextChanged
+        If TextBox4.Text.Length = 1 Then
+            Button1.Focus()
+        End If
+    End Sub
+End Class

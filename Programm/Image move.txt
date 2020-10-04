@@ -1,0 +1,5 @@
+button
+Timer1.Enable = True
+
+Timer_Tick
+sonic.Location = New Point(Sonic.Location.X + 5, Sonic.Location.Y)

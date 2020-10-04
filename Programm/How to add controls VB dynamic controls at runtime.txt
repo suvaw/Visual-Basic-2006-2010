@@ -1,0 +1,119 @@
+Public Class Form1
+    Dim ArraySize As Integer = 5
+    Dim MyLabel() As Label
+    Dim MyTextBox() As TextBox
+    Dim MyNoticeLabel As Label
+    Dim MyTimerTextBox As TextBox
+    Dim MyButton As Button
+    Dim MyTimer As Timer
+    Dim i1 As Int32
+
+    Private Sub Form_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ConfigureForm()
+        DynamicArrayOfControls()
+        DynamicControls()
+    End Sub
+
+    Sub ConfigureForm()
+        With Me 'Show what happens when you use Form1
+            .Width = 330
+            .Height = 220
+            .text = "Dynamic Controls Build at Runtime"
+        End With
+    End Sub
+    Sub DynamicArrayOfControls()
+        ReDim MyLabel(ArraySize)
+        ReDim MyTextBox(ArraySize)
+
+        For i = 1 To ArraySize
+            MyLabel(i) = New Label
+            With MyLabel(i)
+                .Name = "Lable" + i.ToString
+                .Text = "Label" + i.ToString
+                .Visible = True
+                .Top = 10 + (22 * i)
+                .Width = 55
+                .TextAlign = ContentAlignment.MiddleRight
+                AddHandler .Click, AddressOf MyMessage
+            End With
+            Me.Controls.Add(MyLabel(i))
+
+            MyTextBox(i) = New TextBox()
+            With MyTextBox(i)
+                .Name = "TextBox" + i.ToString
+                .Top = 10 + (22 * i)
+                .Left = 60
+                .Text = 123456789
+                AddHandler .Click, AddressOf MyMessage
+            End With
+            Me.Controls.Add(MyTextBox(i))
+        Next
+    End Sub
+    Sub MyMessage(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim MyName As String = sender.name
+        Dim MyHeight As String = sender.Height.ToString
+        Dim MyWidth As String = sender.Width.ToString
+        Dim MyType As String = sender.GetType.ToString
+        MyType = Mid(MyType, InStrRev(MyType, ".") + 1, Len(MyType))
+
+        MsgBox("Hi" + vbNewLine + _
+        "My name is " + MyName + "and I an a " + MyType + vbNewLine + _
+        "I am" + MyHeight + "pixdls tall and" + MyWidth + "Pixel width.")
+    End Sub
+    Sub DynamicControls()
+        MyNoticeLabel = New Label
+        With MyNoticeLabel
+            .Name = "MyNoticeLabel"
+            .Top = 10
+            .Left = 25
+            .AutoSize = True
+            .Text = "Click on Labels and TextBoxes to get a message"
+            AddHandler .Click, AddressOf MyMessage
+        End With
+        Me.Controls.Add(MyNoticeLabel)
+
+        MyTimerTextBox = New TextBox
+        With MyTimerTextBox
+            .Name = "MyTimerTextBox"
+            .Top = 32
+            .Left = 200
+            .Size = New Size(95, 85)
+            .Multiline = True
+            .ScrollBars = ScrollBars.Vertical
+            .Text = 0 & Chr(32)
+            AddHandler .Click, AddressOf MyMessage
+        End With
+        Me.Controls.Add(MyTimerTextBox)
+
+        MyButton = New Button
+        With MyButton
+            .Name = "MyButton"
+            .Top = 118
+            .Left = 200
+            .Width = 95
+            .Text = "Start Timer"
+            AddHandler .Click, AddressOf MyButton_Click
+        End With
+        Me.Controls.Add(MyButton)
+
+        MyTimer = New Timer
+        With MyTimer
+            .Enabled = False
+            .Interval = 500
+            AddHandler .Tick, AddressOf MyTimer_Tick
+        End With
+    End Sub
+    Private Sub MyTimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        i1 += 1
+        MyTimerTextBox.Text += i1 & Chr(32)
+    End Sub
+    Private Sub MyButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If MyButton.Text = "Start Timer" Then
+            MyTimer.Enabled = True
+            MyButton.Text = "Stop Timer"
+        Else
+            MyTimer.Enabled = False
+            MyButton.Text = "Start Timer"
+        End If
+    End Sub
+End Class

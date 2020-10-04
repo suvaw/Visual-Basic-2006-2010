@@ -1,0 +1,1 @@
+Panel2.Size = New Size(200, Panel2.Size.Height)

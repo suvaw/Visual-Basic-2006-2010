@@ -1,0 +1,28 @@
+Imports System.Net.Mail
+Public Class Form1
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Try
+            If TextBox1.Text = "" Then
+                MsgBox("Error! No username")
+            Else
+                If TextBox2.Text = "" Then
+                    MsgBox("Error! No Password")
+                Else
+                    Dim message As New Net.Mail.MailMessage(TextBox1.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+                    Dim smtp As New Net.Mail.SmtpClient("smtp.gmail.com", 465)
+                    Dim credentials As New Net.NetworkCredential(TextBox1.Text, TextBox2.Text)
+                    smtp.EnableSsl = True
+                    smtp.Credentials = credentials
+                    smtp.Port = 465
+                    smtp.Host = "smtp.gmail.com"
+                    smtp.Send(message)
+                   MsgBox("Sent!")
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+End Class

@@ -1,0 +1,66 @@
+Public Class Class1
+
+    Public internet As Boolean = False
+
+    Public exists As Boolean = False
+
+    Sub checkinternet()
+
+        If My.Computer.Network.IsAvailable = True Then
+
+            internet = True
+
+        Else
+
+            internet = False
+
+        End If
+
+    End Sub
+
+    Sub downloadfile(ByVal file As String, ByVal location As String)
+
+        If internet = True Then
+
+            My.Computer.Network.DownloadFile(file, location)
+
+        Else
+
+            checkinternet()
+
+        End If
+
+    End Sub
+
+    Sub checkfile(ByVal file As String)
+
+        If My.Computer.FileSystem.FileExists(file) Then
+
+            exists = True
+
+        Else
+
+            MsgBox("Download corrupt!")
+
+            exists = False
+
+        End If
+
+    End Sub
+
+    Sub runfile(ByVal file As String)
+
+        If exists = True Then
+
+
+            Shell(file)
+
+
+        End If
+
+    End Sub
+    'I added a few lines of code to make the program more functional
+    '-------------------------------------------------------------------------
+    'I hoped you enjoyed my tutorial, and sorry for the slight audio/video lag
+    '-BrandonioProductions   http://brandonsoft.com
+End Class

@@ -1,0 +1,26 @@
+Public Class Form1
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        SaveFileDialog1.Filter = "Text File|*.txt*|All File|*.*"
+        If TextBox1.Text = "" Then
+            MsgBox("Your text box is empty", MsgBoxStyle.Information)
+        ElseIf SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, TextBox1.Text, True)
+        End If
+    End Sub
+
+    
+
+    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim font1 As New Font("Comic sans MS", 16, FontStyle.Bold)
+        e.Graphics.DrawString(TextBox1.Text, font1, Brushes.Black, 20, 20)
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        PrintDocument1.Print()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+End Class

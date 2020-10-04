@@ -1,0 +1,33 @@
+Check for Valid Email Address in VB.NET Source code:
+
+Imports System.Text.RegularExpressions
+
+Public Class Form1
+
+
+    Function EmailCheck(ByVal emailAddress As String) As Boolean
+
+
+        Dim pattern As String = "^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+        Dim emailAddressMatch As Match = Regex.Match(emailAddress, pattern)
+
+
+        If emailAddressMatch.Success Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+
+    Private Sub Button1_Click_1(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim MyEmail As String = TextBox1.Text
+        If EmailCheck(MyEmail) = True Then
+            Label2.Text = "Valid Email!"
+        Else
+            Label2.Text = "Invalid Email!"
+        End If
+
+    End Sub
+End Class

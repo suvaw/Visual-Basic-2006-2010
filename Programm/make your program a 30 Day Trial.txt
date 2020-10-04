@@ -1,0 +1,44 @@
+    Public day As String
+    Public month As String
+    Public year As String
+
+
+
+
+
+	day = My.Computer.Clock.LocalTime.Day
+        month = My.Computer.Clock.LocalTime.Month
+        year = My.Computer.Clock.LocalTime.Year
+        If My.Settings.checked = False Then
+            My.Settings.day = day
+            My.Settings.month = month
+            My.Settings.year = year
+            My.Settings.checked = True
+        Else
+            If year = My.Settings.year Then
+                If month = My.Settings.month Then
+                Else
+                    If month = My.Settings.month + 1 Then
+                        If day = My.Settings.day Then
+                            MsgBox("Trial is over")
+                        Else
+                            If day > My.Settings.day Then
+                                MsgBox("Trial is over")
+                            End If
+                        End If
+                    Else
+                        If month <> My.Settings.month + 1 Then
+                            MsgBox("Trial is over")
+
+                        End If
+                    End If
+                End If
+            Else
+                MsgBox("Trial is over")
+            End If
+
+        End If
+
+
+    End Sub
+End Class

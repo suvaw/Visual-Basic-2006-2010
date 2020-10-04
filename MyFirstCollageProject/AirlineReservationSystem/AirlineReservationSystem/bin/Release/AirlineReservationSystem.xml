@@ -1,0 +1,140 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AirlineReservationSystem
+</name>
+</assembly>
+<members>
+<member name="P:AirlineReservationSystem.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._12">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._13">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._14">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._15">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._15788_illustration_of_a_blank_glossy_rectangular_button_pv">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._18">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._4">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._5">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._6">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._7">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._7990624_orig">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._827312_airport_512x512">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources._9">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.b1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.b11">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.b2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.flight1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.glossy_button_blank_yellow_rectangle">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.home_button">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.login_button_png_13">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.orange_rectangle_button_hi">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.orange_rectangle_button_hi1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.power_button_icon_22">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.return_home_button_png_7">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.Search_Button_PNG_Transparent_Image">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AirlineReservationSystem.My.Resources.Resources.show_image">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:AirlineReservationSystem.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

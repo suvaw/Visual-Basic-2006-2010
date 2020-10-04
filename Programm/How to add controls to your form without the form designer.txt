@@ -1,0 +1,18 @@
+Public Class form1
+Private Sub form1_Load(.....)..
+Dim button As New Button
+button.text = "Press Me!"
+Me.Controls.Add(button)
+AddHandler button.Click, AddressOf button_click
+End Sub
+
+Sub button_click()
+MsgBox("lol!")
+End Sub
+
+Dim Textd As New TextBox
+Textd.Text="Message box"
+Me.Controls.Add(Textd)
+Dim x As New System.Drawing.Point(300,150)
+Textd.Location = x
+End Class

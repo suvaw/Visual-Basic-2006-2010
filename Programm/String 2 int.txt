@@ -1,0 +1,7 @@
+Price = CInt(Int(txtPrice.Text))
+Convert.toInt32(txtPrice.Text)
+Convert.toDecimal(txtPrice.Text)
+Convert.toInt32(txtPrice.Text)
+Convert.toDecimal(txtPrice.Text)
+Dim Price As Integer 
+Int32.TryParse(txtPrice.Text, Price)

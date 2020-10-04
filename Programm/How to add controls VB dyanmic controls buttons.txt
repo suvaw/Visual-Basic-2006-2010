@@ -1,0 +1,25 @@
+Public Class Form1
+    Public Buttons(10, 10) As Button
+    Private Sub form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim pt As Point
+        pt.X = 0
+        pt.Y = 0
+        For i = 1 To 10
+            For x = 1 To 10
+                Buttons(i, x) = New Button
+                Buttons(i, x).Location = pt
+                Buttons(i, x).Width = 50
+                Buttons(i, x).Height = 50
+                Buttons(i, x).Name = i & "-" & x
+                AddHandler Buttons(i, x).Click, AddressOf buttonClick
+                Me.Controls.Add(Buttons(i, x))
+                pt.X = pt.X + 50
+            Next
+            pt.X = 0
+            pt.Y = pt.Y + 50
+        Next
+    End Sub
+    Private Sub buttonClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        MsgBox("hi    " + sender.Name)
+    End Sub
+End Class

@@ -1,0 +1,43 @@
+Public Class form1
+
+private Sub PhonenumberTextBox_KeyPress(ByVal sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles PhonenumberTextBox
+'the following is all the special characters that we dont want our phonenumbers
+Dim DisallowedChars As String = ",<.>/?;:'][{}*!@#$%^&()_+-="
+
+'Disallow allow all the alphabets
+If Char.IsLetter(e.KeyChar) = True Then
+e.Handled = True
+MsgBox("Phone Number must be number only")
+
+PhonenumberTextBox.BackColor = Color.Red
+PhonenumberTextBox.ForeColor = Color.White
+
+'check if character that we disallowed
+ElseIf DisallowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+e.KeyChar = ChrW(0)
+e.Handled = True
+
+MsgBox("Phonenumbers must be numbers only")
+
+PhonenumberTextBox.BackColor = Color.Red
+PhonenumberTextBox.ForeColor = Color.White
+
+Else
+'if character entered is numbers
+
+PhonenumberTextBox.BackColor = Color.White
+PhonenumberTextBox.ForeColor = Color.Red
+
+End If
+
+If PhonenumberTextBox.Text.Length <> 10 Then
+
+MsgBox("Phonenumber must be 10 character long")
+
+Else
+MsgBox("Valid Phonenumber");
+End If
+
+End Sub
+
+End Class

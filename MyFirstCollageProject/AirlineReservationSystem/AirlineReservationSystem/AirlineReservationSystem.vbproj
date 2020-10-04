@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62B504B8-2F60-44D2-9F6C-7F22A7BD9B0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AirlineReservationSystem.My.MyApplication</StartupObject>
+    <RootNamespace>AirlineReservationSystem</RootNamespace>
+    <AssemblyName>AirlineReservationSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Suvadip Mandal\Desktop\SplashExample\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AirlineReservationSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AirlineReservationSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>plane.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="background.Designer.vb">
+      <DependentUpon>background.vb</DependentUpon>
+    </Compile>
+    <Compile Include="background.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.Designer.vb">
+      <DependentUpon>loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Checkin.designer.vb">
+      <DependentUpon>Checkin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Checkin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data.vb" />
+    <Compile Include="Main\flight status.designer.vb">
+      <DependentUpon>flight status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\flight status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainWindows.designer.vb">
+      <DependentUpon>MainWindows.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MainWindows.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfile\MyProfile.designer.vb">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile\MyProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_Recovery\Mobile.Designer.vb">
+      <DependentUpon>Mobile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Recovery\Mobile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\add ons.designer.vb">
+      <DependentUpon>add ons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\add ons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBcontrols.vb" />
+    <Compile Include="ExitPopup.Designer.vb">
+      <DependentUpon>ExitPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExitPopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginsystem\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loginsystem\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginsystem\MemberRegistation.Designer.vb">
+      <DependentUpon>MemberRegistation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loginsystem\MemberRegistation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\Seat.designer.vb">
+      <DependentUpon>Seat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\Seat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\Search.designer.vb">
+      <DependentUpon>Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\paymen.designer.vb">
+      <DependentUpon>paymen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\paymen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Password_Recovery\ForgetPassword.Designer.vb">
+      <DependentUpon>ForgetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Recovery\ForgetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_Recovery\OTP_Verify.Designer.vb">
+      <DependentUpon>OTP_Verify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Recovery\OTP_Verify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_Recovery\RESET_PASSWORD.Designer.vb">
+      <DependentUpon>RESET_PASSWORD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Recovery\RESET_PASSWORD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking\travelling.designer.vb">
+      <DependentUpon>travelling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\travelling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\view book.designer.vb">
+      <DependentUpon>view book.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\view book.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="background.resx">
+      <DependentUpon>background.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Checkin.resx">
+      <DependentUpon>Checkin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\flight status.resx">
+      <DependentUpon>flight status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainWindows.resx">
+      <DependentUpon>MainWindows.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfile\MyProfile.resx">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_Recovery\Mobile.resx">
+      <DependentUpon>Mobile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\add ons.resx">
+      <DependentUpon>add ons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitPopup.resx">
+      <DependentUpon>ExitPopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginsystem\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginsystem\MemberRegistation.resx">
+      <DependentUpon>MemberRegistation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\Seat.resx">
+      <DependentUpon>Seat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\Search.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\paymen.resx">
+      <DependentUpon>paymen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_Recovery\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_Recovery\OTP_Verify.resx">
+      <DependentUpon>OTP_Verify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_Recovery\RESET_PASSWORD.resx">
+      <DependentUpon>RESET_PASSWORD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking\travelling.resx">
+      <DependentUpon>travelling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\view book.resx">
+      <DependentUpon>view book.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\827312_airport_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plane.ico" />
+    <None Include="Resources\b2.jpg" />
+    <None Include="Resources\b1.png" />
+    <None Include="Resources\b1.jpg" />
+    <None Include="Resources\9.jpg" />
+    <None Include="Resources\7.jpg" />
+    <None Include="Resources\6.jpg" />
+    <None Include="Resources\5.jpg" />
+    <None Include="Resources\4.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\show_image.png" />
+    <None Include="Resources\orange-rectangle-button-hi1.png" />
+    <None Include="Resources\7990624_orig.png" />
+    <None Include="Resources\Search-Button-PNG-Transparent-Image.png" />
+    <None Include="Resources\return-home-button-png-7.png" />
+    <None Include="Resources\home_button.png" />
+    <None Include="Resources\power-button-icon-22.png" />
+    <None Include="Resources\orange-rectangle-button-hi.png" />
+    <None Include="Resources\login-button-png-13.png" />
+    <None Include="Resources\glossy_button_blank_yellow_rectangle.png" />
+    <None Include="Resources\15788-illustration-of-a-blank-glossy-rectangular-button-pv.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

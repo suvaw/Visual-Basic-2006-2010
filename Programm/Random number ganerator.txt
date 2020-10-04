@@ -1,0 +1,14 @@
+step 1:
+======
+Random variable declear
+Dim <variable name> As New Random
+
+step 2:
+======
+condition set
+<object name>.Next(<start Range>,<stop Range>)
+
+Example:
+========
+Dim rand As New Random
+data.suva = rand.Next(1000, 9999)

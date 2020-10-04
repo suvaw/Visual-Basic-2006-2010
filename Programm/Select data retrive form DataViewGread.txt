@@ -1,0 +1,17 @@
+Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+
+        Dim index As Integer
+
+       ' get the index of the selected datagridview row
+        index = e.RowIndex
+
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView1.Rows(index)
+
+        ' now show data from the selected row to textboxes
+        TextBoxID.Text = selectedRow.Cells(0).Value.ToString()
+        TextBoxFN.Text = selectedRow.Cells(1).Value.ToString()
+        TextBoxLN.Text = selectedRow.Cells(2).Value.ToString()
+        TextBoxAGE.Text = selectedRow.Cells(3).Value.ToString()
+
+    End Sub

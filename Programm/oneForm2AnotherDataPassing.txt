@@ -1,0 +1,31 @@
+step 1:
+create two form.
+<form2> declear variable [public property <variable name> As String]
+<form1> declear variable [Dim <variable name> As New <form2>]
+
+step 2:
+<form1 variable>.<form2 variable> = [data source]
+<form1 variable>.show()
+me.hide()
+
+Example:
+=======
+Public Class Form1
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim data As New Form2
+        data.suva = TextBox1.Text
+        data.Show()
+        Me.Hide()
+        'Form2.Show()
+    End Sub
+End Class
+
+
+Public Class Form2
+    Public Property suva As String
+
+    Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label1.Text = suva
+    End Sub
+End Class

@@ -1,0 +1,14 @@
+Imports System.Data.OleDb
+Public Class Form1
+    Dim c11 As New OleDb.OleDbCommand
+    Public cnn = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=C:\Users\Suvadip Mandal\Documents\Flight1.accdb;")
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        cnn.open()
+        c11.Connection = cnn
+        Dim maxid As Object
+        c11.CommandText = "select MAX(ID) from ticketdata"
+        maxid = c11.ExecuteScalar
+        TextBox1.Text = maxid
+        cnn.close()
+    End Sub
+End Class
